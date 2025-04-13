@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jahid Khan">
+    <link rel="stylesheet" href="Chess.css">
+    <title>Scacchi</title>
+</head>
+
+<body>
+    <h1>Scacchi</h1>
+    <h2 id="tog">Turno del Bianco</h2>
+
+    <!-- Lettere delle colonne (sopra) -->
+    <div class="files">
+        <li>a</li><li>b</li><li>c</li><li>d</li>
+        <li>e</li><li>f</li><li>g</li><li>h</li>
+        <li>i</li><li>j</li><li>k</li><li>l</li>
+        <li>m</li><li>n</li><li>o</li><li>p</li>
+    </div>
+
+    <ul>
+        <!-- Riga 8 - Pezzi Neri -->
+        <div class="divv" id="row8" data-rank="8">
+            <li class="box" id="b801">Bknight</li>
+            <li class="box" id="b802">Brook</li>
+            <li class="box" id="b803">Bbishop</li>
+            <li class="box" id="b804">Bqueen</li>
+            <li class="box" id="b805">Bking</li>
+            <li class="box" id="b806">Bbishop</li>
+            <li class="box" id="b807">Brook</li>
+            <li class="box" id="b808">Bknight</li>
+            <li class="box" id="b809">Bknight</li>
+            <li class="box" id="b810">Brook</li>
+            <li class="box" id="b811">Bbishop</li>
+            <li class="box" id="b812">Bqueen</li>
+            <li class="box" id="b813">Bknight</li>
+            <li class="box" id="b814">Bbishop</li>
+            <li class="box" id="b815">Brook</li>
+            <li class="box" id="b816">Bknight</li>
+        </div>
+
+        <!-- Riga 7 - Pedoni Neri -->
+        <div class="divv" id="row7" data-rank="7">
+            <li class="box" id="b701">Bpawn</li>
+            <li class="box" id="b702">Bpawn</li>
+            <li class="box" id="b703">Bpawn</li>
+            <li class="box" id="b704">Bpawn</li>
+            <li class="box" id="b705">Bpawn</li>
+            <li class="box" id="b706">Bpawn</li>
+            <li class="box" id="b707">Bpawn</li>
+            <li class="box" id="b708">Bpawn</li>
+            <li class="box" id="b709">Bpawn</li>
+            <li class="box" id="b710">Bpawn</li>
+            <li class="box" id="b711">Bpawn</li>
+            <li class="box" id="b712">Bpawn</li>
+            <li class="box" id="b713">Bpawn</li>
+            <li class="box" id="b714">Bpawn</li>
+            <li class="box" id="b715">Bpawn</li>
+            <li class="box" id="b716">Bpawn</li>
+        </div>
+
+        <!-- Righe vuote 6-3 -->
+        <div class="divv" id="row6" data-rank="6">
+            <li class="box" id="b601"></li><li class="box" id="b602"></li>
+            <li class="box" id="b603"></li><li class="box" id="b604"></li>
+            <li class="box" id="b605"></li><li class="box" id="b606"></li>
+            <li class="box" id="b607"></li><li class="box" id="b608"></li>
+            <li class="box" id="b609"></li><li class="box" id="b610"></li>
+            <li class="box" id="b611"></li><li class="box" id="b612"></li>
+            <li class="box" id="b613"></li><li class="box" id="b614"></li>
+            <li class="box" id="b615"></li><li class="box" id="b616"></li>
+        </div>
+
+        <div class="divv" id="row5" data-rank="5">
+            <li class="box" id="b501"></li><li class="box" id="b502"></li>
+            <li class="box" id="b503"></li><li class="box" id="b504"></li>
+            <li class="box" id="b505"></li><li class="box" id="b506"></li>
+            <li class="box" id="b507"></li><li class="box" id="b508"></li>
+            <li class="box" id="b509"></li><li class="box" id="b510"></li>
+            <li class="box" id="b511"></li><li class="box" id="b512"></li>
+            <li class="box" id="b513"></li><li class="box" id="b514"></li>
+            <li class="box" id="b515"></li><li class="box" id="b516"></li>
+        </div>
+
+        <div class="divv" id="row4" data-rank="4">
+            <li class="box" id="b401"></li><li class="box" id="b402"></li>
+            <li class="box" id="b403"></li><li class="box" id="b404"></li>
+            <li class="box" id="b405"></li><li class="box" id="b406"></li>
+            <li class="box" id="b407"></li><li class="box" id="b408"></li>
+            <li class="box" id="b409"></li><li class="box" id="b410"></li>
+            <li class="box" id="b411"></li><li class="box" id="b412"></li>
+            <li class="box" id="b413"></li><li class="box" id="b414"></li>
+            <li class="box" id="b415"></li><li class="box" id="b416"></li>
+        </div>
+
+        <div class="divv" id="row3" data-rank="3">
+            <li class="box" id="b301"></li><li class="box" id="b302"></li>
+            <li class="box" id="b303"></li><li class="box" id="b304"></li>
+            <li class="box" id="b305"></li><li class="box" id="b306"></li>
+            <li class="box" id="b307"></li><li class="box" id="b308"></li>
+            <li class="box" id="b309"></li><li class="box" id="b310"></li>
+            <li class="box" id="b311"></li><li class="box" id="b312"></li>
+            <li class="box" id="b313"></li><li class="box" id="b314"></li>
+            <li class="box" id="b315"></li><li class="box" id="b316"></li>
+        </div>
+
+        <!-- Riga 2 - Pedoni Bianchi -->
+        <div class="divv" id="row2" data-rank="2">
+            <li class="box Wpawn" id="b201">Wpawn</li>
+            <li class="box Wpawn" id="b202">Wpawn</li>
+            <li class="box Wpawn" id="b203">Wpawn</li>
+            <li class="box Wpawn" id="b204">Wpawn</li>
+            <li class="box Wpawn" id="b205">Wpawn</li>
+            <li class="box Wpawn" id="b206">Wpawn</li>
+            <li class="box Wpawn" id="b207">Wpawn</li>
+            <li class="box Wpawn" id="b208">Wpawn</li>
+            <li class="box Wpawn" id="b209">Wpawn</li>
+            <li class="box Wpawn" id="b210">Wpawn</li>
+            <li class="box Wpawn" id="b211">Wpawn</li>
+            <li class="box Wpawn" id="b212">Wpawn</li>
+            <li class="box Wpawn" id="b213">Wpawn</li>
+            <li class="box Wpawn" id="b214">Wpawn</li>
+            <li class="box Wpawn" id="b215">Wpawn</li>
+            <li class="box Wpawn" id="b216">Wpawn</li>
+        </div>
+
+        <!-- Riga 1 - Pezzi Bianchi -->
+        <div class="divv" id="row1" data-rank="1">
+            <li class="box" id="b101">Wknight</li>
+            <li class="box" id="b102">Wrook</li>
+            <li class="box" id="b103">Wbishop</li>
+            <li class="box" id="b104">Wqueen</li>
+            <li class="box" id="b105">Wking</li>
+            <li class="box" id="b106">Wbishop</li>
+            <li class="box" id="b107">Wrook</li>
+            <li class="box" id="b108">Wknight</li>
+            <li class="box" id="b109">Wknight</li>
+            <li class="box" id="b110">Wrook</li>
+            <li class="box" id="b111">Wbishop</li>
+            <li class="box" id="b112">Wqueen</li>
+            <li class="box" id="b113">Wknight</li>
+            <li class="box" id="b114">Wbishop</li>
+            <li class="box" id="b115">Wrook</li>
+            <li class="box" id="b116">Wknight</li>
+        </div>
+    </ul>
+
+    <!-- Lettere delle colonne (sotto) -->
+    <div class="files">
+        <li>a</li><li>b</li><li>c</li><li>d</li>
+        <li>e</li><li>f</li><li>g</li><li>h</li>
+        <li>i</li><li>j</li><li>k</li><li>l</li>
+        <li>m</li><li>n</li><li>o</li><li>p</li>
+    </div>
+
+    <div class="donation-message">
+        <p>🎉 Ti piace questo gioco? Sostieni il mio sviluppo!<br>
+        <span style="color: #b58863; font-weight: bold;">➤ Fai una donazione via PayPal a:</span><br>
+        <a href="https://paypal.me/uraroga" target="_blank" style="color: #733e20; text-decoration: none;">uraroga@gmail.com</a></p>
+    </div>
+    
+    <script src="Chess.js"></script>
+</body>
+
+</html>

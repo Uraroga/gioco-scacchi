@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+    background-color: #f0e6d2;
+    color: #333;
+}
+
+h1 {
+    margin: 10px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.divv {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    display: grid;
+    place-items: center;
+    font-size: 0px;
+}
+
+.box {
+    margin: .5px;
+    width: 50px;
+    height: 50px;
+}
+
+#tog {
+    margin: 10px 0px;
+}
+
+.allimg {
+    width: 45px;
+    position: relative;
+    bottom: 5px;
+}
+
+.allpawn {
+    transform: scale(.7);
+}
+
+.authcont {
+    width: 100vw;
+}
+
+.author {
+    float: right;
+    margin-right: 50px;
+}
+
+@media (max-width:650px) {
+    #tog {
+        margin-bottom: 70px;
+    }
+
+    .box {
+        width: 6.5vw;
+        height: 6.5vw;
+    }
+
+    .allimg {
+        width: 5vw;
+    }
+}
+
+/* Numeri delle righe */
+.divv::before {
+    content: attr(data-rank);
+    font-size: 20px;
+    align-self: center;
+    margin-right: 12px;  /* Ridotto da 15px */
+    width: 25px;  /* Aggiunto */
+    text-align: right;  /* Aggiunto */
+}
+
+/* Lettere colonne */
+.files {
+    display: flex;
+    justify-content: center;
+    margin-left: 58px;  /* Regolato precisamente */
+    margin-top: 5px;
+}
+
+.files li {
+    width: 50px;
+    text-align: center;
+    font-size: 18px;
+    list-style: none;
+    padding: 0 1px;
+    box-sizing: border-box;
+    transform: translateX(-0.5px);  /* Micro-aggiustamento */
+}
+
+/* Versione mobile */
+@media (max-width:650px) {
+    .divv::before {
+        margin-right: 3.2vw;  /* Ridotto */
+        width: 6vw;  /* Aggiunto */
+    }
+    
+    .files {
+        margin-left: 13.5vw;  /* Ridotto da 15vw */
+    }
+    
+    .files li {
+        width: 6.5vw;
+        font-size: 2.5vw;
+        transform: translateX(-0.3vw);  /* Compensazione precisa */
+        padding: 0 0.2vw;
+    }
+}
+
+/* Messaggio donazione */
+.donation-message {
+    text-align: center;
+    margin: 25px 0;
+    padding: 15px;
+    background-color: rgba(240, 230, 210, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.donation-message p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width:650px) {
+    .donation-message p {
+        font-size: 0.9em;
+    }
+}
